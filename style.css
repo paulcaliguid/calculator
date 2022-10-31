@@ -20,6 +20,14 @@ body {
 #screen {
     background-color: #FDFDBD;
     height: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    padding-right: 40px;
+}
+
+#big-screen-text {
+    font-size: x-large;
 }
 
 .button-row {
@@ -36,4 +44,12 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 25px;
+}
+
+.button:hover {
+    background-color: #547955
+}
+
+.button:active {
+  background-color: #163d17;
 }
