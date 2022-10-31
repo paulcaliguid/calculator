@@ -1,0 +1,39 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#outside-border {
+    display: flex;
+    height: 550px;
+    width: 400px;
+    flex-direction: column;
+    background-color: #B1AFFF;
+    padding: 40px;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+
+#screen {
+    background-color: #FDFDBD;
+    height: 150px;
+}
+
+.button-row {
+    height: 60px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    display: flex;
+    width: 90px;
+    background-color: #C8FFD4;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
