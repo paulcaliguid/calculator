@@ -39,9 +39,9 @@ buttonsArray.forEach(button => {
 })
 
 function numberClicked(e, keyboardChar = null) {
-    editing = true;
     let toAdd;
-    if (currentString === "") {
+    if (currentString === "" || !editing) {
+        currentString = "";
         bigText.innerHTML = "";
     }
     if(keyboardChar) {
@@ -49,6 +49,7 @@ function numberClicked(e, keyboardChar = null) {
     } else {
         toAdd = e.target.innerHTML
     }
+    editing = true;
     currentString += toAdd;
     bigText.innerHTML += toAdd;
 }
@@ -61,6 +62,11 @@ function operatorClicked(e, keyboardChar = null) {
     } else {
         toAdd = e.target.innerHTML
     }
+
+    if(operatorClickedBool === true) {
+        equalsClicked();
+    }
+
     if(currentString) {
         num1 = Number(currentString);
     } else {
@@ -94,7 +100,7 @@ function equalsClicked(e) {
     bigText.innerHTML = result;
     editing = false;
     operatorClickedBool = false;
-    operator = "";
+    operator = "";      
 }
 
 function clearClicked(e) {
