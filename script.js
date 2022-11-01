@@ -83,7 +83,8 @@ function equalsClicked(e) {
         return;
     }
 
-    if (currentString === "") {
+    if (currentString === "") {Clear
+
         num2 = null;
     } else {
         num2 = Number(currentString);
@@ -111,6 +112,7 @@ function clearClicked(e) {
     num1 = null;
     num2 = null;
     operatorClickedBool = false;
+    editing = true;
 }
 
 function deleteClicked(e) {     
@@ -169,8 +171,13 @@ function dotClicked(e) {
     if (currentString.includes(".")) {
         return;
     }
-    bigText.innerHTML += ".";
-    currentString += ".";
+    if(!currentString) {
+        currentString += "0.";
+        bigText.innerHTML += "0.";
+    } else {
+        bigText.innerHTML += ".";
+        currentString += ".";
+    }
 }
 
 function operate(operator, num1, num2) {
