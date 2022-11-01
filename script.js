@@ -50,8 +50,13 @@ function operatorClicked(e) {
 }
 
 function equalsClicked(e) {
-    num2 = Number(currentString);
-    if (!isNumber(num1) || !isNumber(num2) || num2 === 0 || !operator) {
+    if (currentString === "") {
+        num2 = null;
+    } else {
+        num2 = Number(currentString);
+    }
+
+    if (!isNumber(num1) || !isNumber(num2) || !operator) {
         currentString = "";
         return;
     }
@@ -83,6 +88,9 @@ function operate(operator, num1, num2) {
         case '×':
             return multiply(num1, num2);
         case '÷':
+            if (num2 === 0) {
+                return "Error";
+            }
             return divide(num1, num2);
         default:
             return "Error";
