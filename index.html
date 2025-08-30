@@ -1,47 +1,62 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="outside-border">
-        <div id="screen">
-            <p id="small-screen-text"></p>
-            <p id="big-screen-text"></p>
-        </div>
-        <div class="button-row">
-            <div class="button" id="clear">Clear</div>
-            <div class="button" id="delete">Delete</div>
-        </div>
-        <div class="button-row">
-            <div class="button number" id="7">7</div>
-            <div class="button number" id="8">8</div>
-            <div class="button number" id="9">9</div>
-            <div class="button operator" id="divide">÷</div>
-        </div>
-        <div class="button-row">
-            <div class="button number" id="4">4</div>
-            <div class="button number" id="5">5</div>
-            <div class="button number" id="6">6</div>
-            <div class="button operator" id="multiply">×</div>
-        </div>
-        <div class="button-row">
-            <div class="button number" id="1">1</div>
-            <div class="button number" id="2">2</div>
-            <div class="button number" id="3">3</div>
-            <div class="button operator" id="minus">−</div>
-        </div>
-        <div class="button-row">
-            <div class="button" id="dot">.</div>
-            <div class="button number" id="0">0</div>
-            <div class="button" id="equals">=</div>
-            <div class="button operator" id="add">+</div>
-        </div>
+    <div class="decor" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <div class="grid"></div>
+  </div>
+<div id="outside-border" role="application" aria-label="Calculator">
+    <div id="screen" aria-live="polite">
+      <p id="small-screen-text"></p>
+      <p id="big-screen-text"></p>
     </div>
+
+    <div class="button-row">
+      <div class="button" id="clear" aria-label="Clear">Clear</div>
+      <div class="button" id="delete" aria-label="Delete">Delete</div>
+    </div>
+
+    <div class="button-row">
+      <div class="button number" id="7">7</div>
+      <div class="button number" id="8">8</div>
+      <div class="button number" id="9">9</div>
+      <div class="button operator" id="divide" data-op="/">&divide;</div>
+    </div>
+
+    <div class="button-row">
+      <div class="button number" id="4">4</div>
+      <div class="button number" id="5">5</div>
+      <div class="button number" id="6">6</div>
+      <div class="button operator" id="multiply" data-op="*">&times;</div>
+    </div>
+
+    <div class="button-row">
+      <div class="button number" id="1">1</div>
+      <div class="button number" id="2">2</div>
+      <div class="button number" id="3">3</div>
+      <div class="button operator" id="minus" data-op="-">&minus;</div>
+    </div>
+
+    <div class="button-row">
+      <div class="button" id="dot">.</div>
+      <div class="button number" id="0">0</div>
+      <div class="button" id="equals">=</div>
+      <div class="button operator" id="add" data-op="+">+</div>
+    </div>
+  </div>
 </body>
 </html>
+
+
