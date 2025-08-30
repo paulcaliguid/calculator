@@ -177,3 +177,10 @@ body { animation: bg-pan 30s ease-in-out infinite alternate; background-size: 12
 
 /* Ensure card sits above decorations */
 #outside-border { position: relative; z-index: 1; }
+/* Prevent overflow in the display area */
+#small-screen-text, #big-screen-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Dynamic font sizing for long numbers */
+#big-screen-text { font-size: clamp(28px, 6vw, 42px); }
+#big-screen-text.size-medium { font-size: clamp(24px, 5vw, 34px); }
+#big-screen-text.size-small { font-size: clamp(20px, 4.5vw, 28px); }
+#big-screen-text.size-xsmall { font-size: clamp(16px, 4vw, 24px); }
