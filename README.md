@@ -13,6 +13,10 @@ A simple, responsive calculator built with vanilla HTML, CSS, and JavaScript. It
 
 No build step is required. Open `index.html` in any modern web browser to start using the calculator.
 
+## Live Demo
+
+- GitHub Pages: https://<your-github-username>.github.io/calculator/
+
 ## Project Structure
 
 - `index.html` – markup for the calculator interface
