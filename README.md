@@ -15,7 +15,7 @@ No build step is required. Open `index.html` in any modern web browser to start 
 
 ## Live Demo
 
-- GitHub Pages: https://<your-github-username>.github.io/calculator/
+- GitHub Pages: https://paulcaliguid.github.io/calculator/
 
 ## Project Structure
 
